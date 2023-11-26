@@ -20,9 +20,11 @@ db_name = os.getenv("DB_USER")
 
 # Creating the database URL
 uri = f"postgresql://{db_user}:{db_password}@{db_host}:5432/{db_name}"
+
+print(uri)
 metadata = MetaData()
 
 engine = create_engine(uri)
 
 if __name__ == '__main__':
-    app.run(debug=True, port=os.getenv('PORT'))
+    app.run(host="0.0.0.0", debug=True, port=os.getenv('PORT'))
