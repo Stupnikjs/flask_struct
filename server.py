@@ -9,6 +9,7 @@ from flask import Flask, jsonify, request
 # pip install -r requirements.txt
 app = Flask(__name__)
 
+# gcloud run deploy de-zoom     --region europe-west9 --source .
 
 from router import *
 
@@ -22,4 +23,4 @@ metadata = MetaData()
 engine = create_engine(uri)
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", debug=True, port=os.getenv('PORT'))
+    app.run(host="0.0.0.0", debug=True, port=(os.environ('PORT')))
