@@ -12,16 +12,11 @@ app = Flask(__name__)
 
 from router import *
 
-# Assuming you have the environment variables set
-db_user = os.getenv("DB_USER")
-db_password = os.getenv("DB_PASSWORD")
-db_host = os.getenv("DB_HOST")
-db_name = os.getenv("DB_USER")
-
 # Creating the database URL
-uri = f"postgresql://{db_user}:{db_password}@{db_host}:5432/{db_name}"
+# uri = f"postgresql://{db_user}:{db_password}@{db_host}:5432/{db_name}"
 
-print(uri)
+uri=os.getenv('DB_URI')
+
 metadata = MetaData()
 
 engine = create_engine(uri)
