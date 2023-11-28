@@ -22,7 +22,7 @@ def auth():
     return res 
 
 
-@app.route('/get/all') 
+@app.route('/api/all/') 
 def fetchallrempla():
     with Session(engine) as session:
         result = session.query(model.Rempla).all()
@@ -31,7 +31,7 @@ def fetchallrempla():
             response.append(res.to_dict())
         return response
 
-@app.route('/add/one', methods=['POST']) 
+@app.route('/api/new', methods=['POST']) 
 def add_rempla_():
     try:
     # Assuming the request data is JSON
