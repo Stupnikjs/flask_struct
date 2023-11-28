@@ -11,8 +11,11 @@ app = Flask(__name__)
 
 from router import *
 
+if 'DB_URI' in os.environ: 
+    uri=os.environ['DB_URI']
 
-uri=os.environ['DB_URI']
+if uri == '':
+    uri = 'postgresql://lziqbjkd:HP_7F8AFjzdQO8vXtVPrEJLV0wRRcML2@dumbo.db.elephantsql.com:5432/lziqbjkd'
 
 
 metadata = MetaData()
