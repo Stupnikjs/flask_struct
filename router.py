@@ -1,14 +1,26 @@
 import model
 from sqlalchemy.orm import Session 
-from flask import request
+from flask import request, make_response
 from server import app
 from server import engine
-
+import jwt 
 
 
 @app.route('/')
 def index():
     return 'HELLO THERE '
+
+@app.route('/auth', methods=['POST'])
+def auth():
+    data = request.get_json()
+    token = jwt.encode({"name":"michel"}, "secret", algorithm="HS256" )
+    if data.get('password') == 'password':
+        res = make_response('authenticated')
+    else :
+        res = make_response('not_authenticated')
+        res.headers['Authorization'] = 'Bearer ' + token
+
+
 
 @app.route('/get/all') 
 def fetchallrempla():
