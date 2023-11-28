@@ -3,13 +3,15 @@ from sqlalchemy import create_engine, URL, MetaData
 import os
 
 
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, make_response
 
 
 app = Flask(__name__)
 
 
 from router import *
+
+uri = ''
 
 if 'DB_URI' in os.environ: 
     uri=os.environ['DB_URI']

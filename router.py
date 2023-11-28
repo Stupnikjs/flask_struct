@@ -19,7 +19,7 @@ def auth():
     else :
         res = make_response('not_authenticated')
         res.headers['Authorization'] = 'Bearer ' + token
-
+    return res 
 
 
 @app.route('/get/all') 
