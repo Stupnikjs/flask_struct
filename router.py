@@ -1,5 +1,5 @@
 import model
-from sqlalchemy.orm import Session 
+from sqlalchemy.orm import Session
 from flask import request, make_response
 from server import app
 from server import engine
@@ -13,7 +13,9 @@ def index():
 @app.route('/auth', methods=['POST'])
 def auth():
     data = request.get_json()
-    token = jwt.encode({"name":"michel"}, "secret", algorithm="HS256" )
+    email = data.get('email')
+    # func to query password for email 
+    token = jwt.encode({"email": email}, "secret", algorithm="HS256" )
     if data.get('password') == 'password':
         res = make_response('authenticated')
     else :
@@ -40,8 +42,10 @@ def add_rempla_():
             session.add(newrempla)
             session.commit()
             return "done"
-    except : 
-        return "error"
+    except Exception as e:
+        # Print the exception details
+        return f"SQLAlchemyError: {e}"
+        
     
 
 @app.route('/del/one/<int:id>')
@@ -67,8 +71,9 @@ def extractJson(request):
     newrempla = model.Rempla(
         debut=data.get('debut'), 
         fin=data.get('fin'), 
+        location=data.get('location'),
         retrocession=data.get('retrocession'), 
-        location=data.get('location'), 
+        logiciel=data.get('logiciel'),
         minutes_from_home=data.get('minutes_from_home'))
     return newrempla
 
