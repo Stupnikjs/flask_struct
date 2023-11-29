@@ -6,7 +6,7 @@ queryDrop = 'DROP TABLE remplas'
 querySelect = 'SELECT * FROM remplas'
 
 with engine.connect() as conn:
-    # conn.execute(text(queryDrop))
+    conn.execute(text(queryDrop))
     result = conn.execute(text(querySelect))
-    print(result.rows())
+    print(result.fetchall())
 

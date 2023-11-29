@@ -24,9 +24,8 @@ metadata = MetaData()
 
 engine = create_engine(uri)
 
-model.Rempla.metadata.bind = engine
 
-model.Rempla.metadata.create_all()
+metadata.create_all(engine)
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", debug=True, port=os.environ.get('PORT'))
