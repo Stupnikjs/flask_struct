@@ -1,5 +1,7 @@
 from flask import Flask
-from sqlalchemy import create_engine, URL, MetaData
+from sqlalchemy import create_engine
+from sqlalchemy.orm import declarative_base
+from model import Base
 import os
 
 
@@ -20,12 +22,12 @@ if uri == '':
     uri = 'postgresql://lziqbjkd:HP_7F8AFjzdQO8vXtVPrEJLV0wRRcML2@dumbo.db.elephantsql.com:5432/lziqbjkd'
 
 
-metadata = MetaData()
 
 engine = create_engine(uri)
 
 
-metadata.create_all(engine)
+
+Base.metadata.create_all(engine)
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", debug=True, port=os.environ.get('PORT'))
