@@ -29,3 +29,25 @@ class Rempla(Base):
 
     def __str__(self):
         return self.to_dict()
+    
+
+class User(Base):
+    __tablename__='users'
+    id = Column(Integer,primary_key=True)
+    email = Column(String(30))
+    password = Column(String(30)) 
+
+    def __init__(self, email, password): 
+        self.email = email
+        self.password = password
+    
+    def __str__(self):
+        return self.to_dict()
+    
+    
+    def to_dict(self):
+        return {
+            'email':self.email, 
+            'password': self.password
+
+        }

@@ -4,9 +4,7 @@ from sqlalchemy.orm import declarative_base
 from model import Base
 import os
 
-
 from flask import Flask, jsonify, request, make_response
-
 
 app = Flask(__name__)
 
@@ -27,7 +25,8 @@ engine = create_engine(uri)
 
 
 
-Base.metadata.create_all(engine)
+
+Base.metadata.create_all(engine, checkfirst=True)
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", debug=True, port=os.environ.get('PORT'))
