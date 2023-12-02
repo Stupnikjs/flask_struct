@@ -39,51 +39,6 @@ def auth():
 '''
 
 
-
-@app.route('/api/all/') 
-def fetchallrempla():
-    with Session(engine) as session:
-        result = session.query(model.Rempla).all()
-        response = []
-        for res in result: 
-            response.append(res.to_dict())
-        return response
-
-@app.route('/api/new', methods=['POST']) 
-def add_rempla_():
-    try:
-    # Assuming the request data is JSON
-        newrempla = extract_rempla_json(request)
-        with Session(engine) as session:
-            session.add(newrempla)
-            session.commit()
-            return "done"
-    except Exception as e:
-        # Print the exception details
-        return f"SQLAlchemyError: {e}"
-        
-    
-
-@app.route('/api/del/<id>')
-def deleteOne(id):
-    with Session(engine) as session:
-        item = session.query(model.Rempla).get(id)
-        session.delete(item)
-        session.commit()
-        return "done"
-
-@app.route('/get/one/<int:id>')
-def getOne(id):
-    print(id)
-    with Session(engine) as session:
-        item = session.query(model.Rempla).get(id)
-        return item.to_dict()
-
-
-
-
-
-
 @app.route('/auth/create', methods=['POST'])
 def createUser():
     try : 
@@ -94,18 +49,11 @@ def createUser():
             return newuser.to_dict()
     except Exception as e: 
         print(e)
-    
 
-def extract_rempla_json(request):
-    data = request.get_json()
-    newrempla = model.Rempla(
-        debut=data.get('debut'), 
-        fin=data.get('fin'), 
-        location=data.get('location'),
-        retrocession=data.get('retrocession'), 
-        logiciel=data.get('logiciel'),
-        minutes_from_home=data.get('minutes_from_home'))
-    return newrempla
+@app.route('/auth/log', methods=['POST'])
+def authlog():
+    return "hello"
+    
 
 def extract_user_json(request):
     data = request.get_json()

@@ -8,8 +8,21 @@ from flask import Flask, jsonify, request, make_response
 
 app = Flask(__name__)
 
+@app.after_request
+def addCors(response):
+    allowed_origins = ['https://remplasveltenew.fly.dev']
+    origin = request.headers.get('Origin')
+    
+    if origin in allowed_origins:
+        response.headers['Access-Control-Allow-Origin'] = origin
+    response.headers['Access-Control-Allow-Headers'] = 'Content-Type, Authorization'
+    response.headers['Access-Control-Allow-Methods'] = 'GET, POST, PUT, DELETE'
+    response.headers['Access-Control-Allow-Credentials'] = 'true'  # Enable if you're using credentials (cookies, HTTP authentication)
+
+    return response
 
 from router import *
+
 
 uri = ''
 
