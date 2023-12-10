@@ -39,7 +39,8 @@ engine = create_engine(uri)
 
 
 
-Base.metadata.create_all(engine, checkfirst=True)
+# Base.metadata.create_all(engine, checkfirst=True)
+Base.metadata.drop_all(engine)
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", debug=True, port=os.environ.get('PORT'))

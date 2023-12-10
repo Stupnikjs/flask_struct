@@ -6,7 +6,8 @@
       "location": "Maryne PLA ",
       "logiciel": "MLM",
       "minutes_from_home": 20,
-      "retrocession": 75
+      "retrocession": 75, 
+      "color": "green"
     },
     {
       "debut": "2023-12-26",
@@ -15,7 +16,8 @@
       "location": "Maryne. Rochefort ",
       "logiciel": "Dr Sant\u00e9 ",
       "minutes_from_home": 5,
-      "retrocession": 80
+      "retrocession": 80,
+      "color": "gray"
     },
     {
       "debut": "2024-01-08",
@@ -24,7 +26,8 @@
       "location": "Maryne St GdM ",
       "logiciel": "Axisant\u00e9",
       "minutes_from_home": 30,
-      "retrocession": 80
+      "retrocession": 80,
+      "color": "yellow"
     },
     {
       "debut": "2024-01-22",
@@ -33,7 +36,8 @@
       "location": "Maryne PLA ",
       "logiciel": "MLM ",
       "minutes_from_home": 20,
-      "retrocession": 75
+      "retrocession": 75,
+      "color": "lightblue"
     },
     {
       "debut": "2023-12-26",
@@ -42,7 +46,8 @@
       "location": "Lothaire rochefort",
       "logiciel": "dr sante",
       "minutes_from_home": 0,
-      "retrocession": 80
+      "retrocession": 80,
+      "color": "lightred"
     },
     {
       "debut": "",
@@ -51,7 +56,8 @@
       "location": "",
       "logiciel": "",
       "minutes_from_home": 0,
-      "retrocession": 0
+      "retrocession": 0,
+      "color": "blue"
     },
     {
       "debut": "2024-01-02",
@@ -60,7 +66,8 @@
       "location": "lothaire aigre feuille",
       "logiciel": "hellodoc",
       "minutes_from_home": 20,
-      "retrocession": 80
+      "retrocession": 80,
+      "color": "lightblue"
     },
     {
       "debut": "2024-01-29",
@@ -69,7 +76,8 @@
       "location": "Lothaire PLA",
       "logiciel": "MLM",
       "minutes_from_home": 20,
-      "retrocession": 75
+      "retrocession": 75,
+      "color": "lightgray"
     },
     {
       "debut": "2024-02-19",
@@ -78,7 +86,8 @@
       "location": "Maryne Tonnay C (Dr Bourras)",
       "logiciel": "MLM",
       "minutes_from_home": 12,
-      "retrocession": 75
+      "retrocession": 75, 
+      "color": "pink"
     },
     {
       "debut": "2024-02-19",
@@ -87,7 +96,8 @@
       "location": "Lothaire Rochefort Dr Lacroix",
       "logiciel": "",
       "minutes_from_home": 0,
-      "retrocession": 0
+      "retrocession": 0, 
+      "color": "orange"
     },
     {
       "debut": "2024-02-26",
@@ -96,7 +106,8 @@
       "location": "Maryne Rochefort (Gelineau ?)",
       "logiciel": "",
       "minutes_from_home": 0,
-      "retrocession": 0
+      "retrocession": 0, 
+      "color": "lightpink"
     },
     {
       "debut": "2024-02-26",
@@ -105,7 +116,8 @@
       "location": "Lothaire Aigrefeuille ",
       "logiciel": "",
       "minutes_from_home": 0,
-      "retrocession": 0
+      "retrocession": 0,
+      "color": "#FFFFF0"
     },
     {
       "debut": "2024-05-06",
@@ -114,7 +126,8 @@
       "location": "Lothaire Aigrefeuille",
       "logiciel": "",
       "minutes_from_home": 0,
-      "retrocession": 0
+      "retrocession": 0,
+      "color":"#F0F8FF"
     },
     {
       "debut": "2024-03-06",
@@ -123,7 +136,8 @@
       "location": "Maryne PLA Blanchard",
       "logiciel": "",
       "minutes_from_home": 0,
-      "retrocession": 0
+      "retrocession": 0,
+      "color": "#FAEBD7"
     },
     {
       "debut": "2024-03-04",
@@ -132,7 +146,8 @@
       "location": "Lothaire Rochefort Reiss ??",
       "logiciel": "",
       "minutes_from_home": 0,
-      "retrocession": 0
+      "retrocession": 0, 
+      "color":"#FFE4C4" 
     },
     {
       "debut": "2024-04-01",
@@ -141,7 +156,8 @@
       "location": "M ou L PLA Delforge",
       "logiciel": "",
       "minutes_from_home": 0,
-      "retrocession": 0
+      "retrocession": 0, 
+      "color": "#FFEBCD"
     },
     {
       "debut": "2024-05-06",
@@ -150,7 +166,8 @@
       "location": "Maryne Tonnay Charente Bourras",
       "logiciel": "",
       "minutes_from_home": 0,
-      "retrocession": 0
+      "retrocession": 0,
+      "color": "#FFEFD5"
     },
     {
       "debut": "2024-05-10",
@@ -159,7 +176,8 @@
       "location": "Maryne PLA Blanchard 90%",
       "logiciel": "",
       "minutes_from_home": 20,
-      "retrocession": 90
+      "retrocession": 90, 
+      "color": "#FFF8DC"
     },
     {
       "debut": "2024-05-21",
@@ -168,7 +186,8 @@
       "location": "Maryne TC Dr Biasse",
       "logiciel": "",
       "minutes_from_home": 0,
-      "retrocession": 0
+      "retrocession": 0,
+      "color":"#FFFACD"
     },
     {
       "debut": "2024-07-01",
@@ -177,7 +196,8 @@
       "location": "M ou L, Aigrefeuille ",
       "logiciel": "",
       "minutes_from_home": 0,
-      "retrocession": 0
+      "retrocession": 0, 
+      "color":"#FFF5EE"
     },
     {
       "debut": "2024-05-29",
@@ -186,7 +206,8 @@
       "location": "Maryne PLA Dr Blanchard",
       "logiciel": "",
       "minutes_from_home": 0,
-      "retrocession": 0
+      "retrocession": 0,
+      "color":"#F5F5DC"
     },
     {
       "debut": "2023-12-07",
@@ -195,7 +216,8 @@
       "location": "L (Reiss)",
       "logiciel": "",
       "minutes_from_home": 0,
-      "retrocession": 0
+      "retrocession": 0, 
+      "color": "#FDF5E6"
     },
     {
       "debut": "2023-12-08",
@@ -204,7 +226,8 @@
       "location": "L, Cabrol",
       "logiciel": "",
       "minutes_from_home": 0,
-      "retrocession": 0
+      "retrocession": 0,
+      "color":"#FFDAB9"
     },
     {
       "debut": "2023-12-13",
@@ -213,7 +236,8 @@
       "location": "L, Gelineau",
       "logiciel": "",
       "minutes_from_home": 0,
-      "retrocession": 0
+      "retrocession": 0, 
+      "color":"#FFF5E1"
     },
     {
       "debut": "2023-12-14",
@@ -222,7 +246,8 @@
       "location": "L, Reiss",
       "logiciel": "",
       "minutes_from_home": 0,
-      "retrocession": 0
+      "retrocession": 0,
+      "color":"#F0E68C"
     },
     {
       "debut": "2024-04-15",
@@ -231,7 +256,8 @@
       "location": "Rochefort (L ou M)",
       "logiciel": "",
       "minutes_from_home": 0,
-      "retrocession": 0
+      "retrocession": 0, 
+      "color":"#F8F8FF"
     },
     {
       "debut": "2024-04-15",
@@ -240,6 +266,7 @@
       "location": "L, Aigrefeuille, Makos",
       "logiciel": "axisant\u00e9",
       "minutes_from_home": 20,
-      "retrocession": 80
+      "retrocession": 80,
+      "color":"#F0FFFF"
     }
   ]

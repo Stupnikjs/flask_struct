@@ -28,8 +28,22 @@ def add_rempla_():
     except Exception as e:
         # Print the exception details
         return f"SQLAlchemyError: {e}"
-        
 
+
+@app.route('/api/create', methods=['POST']) 
+def add_remplas_():
+    try:
+    # Assuming the request data is JSON
+        newremplas = extract_remplas_json(request)
+        with Session(engine) as session:
+            for rempla in newremplas:
+                session.add(rempla)
+                session.commit()
+            return "done"
+    except Exception as e:
+        # Print the exception details
+        return f"SQLAlchemyError: {e}"
+        
 
 @app.route('/api/del/<id>')
 def deleteOne(id):
@@ -57,3 +71,17 @@ def extract_rempla_json(request):
         logiciel=data.get('logiciel'),
         minutes_from_home=data.get('minutes_from_home'))
     return newrempla
+
+def extract_remplas_json(request):
+    data = request.get_json()
+    remplas = []
+    for rempla in data: 
+        newrempla = model.Rempla(
+            debut=rempla.get('debut'), 
+            fin=rempla.get('fin'), 
+            location=rempla.get('location'),
+            retrocession=rempla.get('retrocession'), 
+            logiciel=rempla.get('logiciel'),
+            minutes_from_home=rempla.get('minutes_from_home'))
+        remplas.append(newrempla)
+    return remplas
