@@ -69,7 +69,8 @@ def extract_rempla_json(request):
         location=data.get('location'),
         retrocession=data.get('retrocession'), 
         logiciel=data.get('logiciel'),
-        minutes_from_home=data.get('minutes_from_home'))
+        minutes_from_home=data.get('minutes_from_home'),
+        color=data.get('color'))
     return newrempla
 
 def extract_remplas_json(request):
@@ -82,6 +83,7 @@ def extract_remplas_json(request):
             location=rempla.get('location'),
             retrocession=rempla.get('retrocession'), 
             logiciel=rempla.get('logiciel'),
-            minutes_from_home=rempla.get('minutes_from_home'))
+            minutes_from_home=rempla.get('minutes_from_home'),
+            color=rempla.get('color'))
         remplas.append(newrempla)
     return remplas

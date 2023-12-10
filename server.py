@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 @app.after_request
 def addCors(response):
-    allowed_origins = ['https://remplasveltenew.fly.dev']
+    allowed_origins = ['https://remplasveltenew.fly.dev', "*"]
     origin = request.headers.get('Origin')
     
     if origin in allowed_origins:
@@ -30,17 +30,17 @@ if 'DB_URI' in os.environ:
     uri=os.environ['DB_URI']
 
 if uri == '':
-    uri = 'postgresql://lziqbjkd:HP_7F8AFjzdQO8vXtVPrEJLV0wRRcML2@dumbo.db.elephantsql.com:5432/lziqbjkd'
-
+    # uri = 'postgresql://lziqbjkd:HP_7F8AFjzdQO8vXtVPrEJLV0wRRcML2@dumbo.db.elephantsql.com:5432/lziqbjkd'
+    uri = 'postgresql://mavkwomw:AcfRavZm6hKU42I0rDRzYcruMuFtI8D6@horton.db.elephantsql.com/mavkwomw'
 
 
 engine = create_engine(uri)
 
 
 
+Base.metadata.create_all(engine, checkfirst=True)
 
-# Base.metadata.create_all(engine, checkfirst=True)
-Base.metadata.drop_all(engine)
+# Base.metadata.drop_all(engine)
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", debug=True, port=os.environ.get('PORT'))
