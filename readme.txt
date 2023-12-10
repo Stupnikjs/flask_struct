@@ -8,7 +8,8 @@ curl -X POST -H "Content-Type: application/json" http://localhost:5000/api/new -
             "logiciel": "lalao",
             "retrocession": 34,
             "location": "la rochelle",
-            "minutes_from_home": 30
+            "minutes_from_home": 30,
+            "color": "red",
         }'
 
 

@@ -15,6 +15,7 @@ class Rempla(Base):
     retrocession = Column(Integer)
     location = Column(String(30))
     minutes_from_home = Column(Integer)
+    color=Column(String(30))
 
     def to_dict(self):
         return {
@@ -24,7 +25,8 @@ class Rempla(Base):
             'logiciel': self.logiciel,
             'retrocession': self.retrocession,
             'location': self.location,
-            'minutes_from_home': self.minutes_from_home
+            'minutes_from_home': self.minutes_from_home, 
+            'color': self.color
         }
 
     def __str__(self):
